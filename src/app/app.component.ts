@@ -18,6 +18,8 @@ export class AppComponent {
   preparingFormGroup: FormGroup;
   queuedFormGroup: FormGroup;
   executingFormGroup: FormGroup;
+  selected: boolean;
+  active: boolean;
 
 
   constructor(private _formBuilder: FormBuilder) {
@@ -25,14 +27,16 @@ export class AppComponent {
 
   ngOnInit() {
     this.preparingFormGroup = this._formBuilder.group({
-      preparingFormCtrl:['a', Validators.required]
+      preparingFormCtrl: ['a', Validators.required]
     })
     this.queuedFormGroup = this._formBuilder.group({
-      queuedFormCtrl:['dd', Validators.required]
+      queuedFormCtrl: ['dd', Validators.required]
     })
     this.executingFormGroup = this._formBuilder.group({
-      executingFormCtrl:['', Validators.required]
+      executingFormCtrl: ['', Validators.required]
     })
+    this.selected = true;
+    this.active = true;
   }
 
 }

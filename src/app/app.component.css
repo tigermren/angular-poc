@@ -1,0 +1,34 @@
+.mat-step-icon1 {
+  background-color: red;
+  color: black;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-image: url("../assets/success.png");
+  background-size: 100%;
+}
+/*
+.mat-step-label {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 24px;
+  vertical-align: middle;
+}
+
+.mat-step-text-label {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.mat-stepper-horizontal-line {
+  border-top-width: 1px;
+  border-top-style: solid;
+  flex: auto;
+  height: 0;
+}
+*/

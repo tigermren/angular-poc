@@ -6,7 +6,7 @@
       </mat-input-container>
     </form>
   </mat-step>
-  <mat-step label="Queued" [stepControl]="queuedFormGroup" [editable]="false" completed="true" >
+  <mat-step label="Queued" [stepControl]="queuedFormGroup" [editable]="false" completed="true">
     <mat-step-header active></mat-step-header>
     <form [formGroup]="queuedFormGroup">
       <mat-input-container hidden>
@@ -14,7 +14,7 @@
       </mat-input-container>
     </form>
   </mat-step>
-  <mat-step label="Executing" [stepControl]="executingFormGroup" [editable]="false" >
+  <mat-step label="Executing" [stepControl]="executingFormGroup" [editable]="false">
     <form [formGroup]="executingFormGroup">
       <mat-input-container hidden>
         <input matInput formControlName="executingFormCtrl">
@@ -22,3 +22,46 @@
     </form>
   </mat-step>
 </mat-horizontal-stepper>
+
+<div class="mat-horizontal-stepper-header-container">
+  <ng-container>
+    <div>
+      <div>
+        <div class="mat-step-header-ripple" mat-ripple></div>
+        <div class="mat-step-text-label">Preparing</div>
+        <div [class.mat-step-icon1]="true">
+          <!-- <span>1</span> -->
+
+        </div>
+        <div class="mat-step-label" [class.mat-step-label-active]="active" [class.mat-step-label-selected]="selected">
+
+          <!-- It there is no label template, fall back to the text label. -->
+
+
+          <!-- <div class="mat-step-optional" *ngIf="optional">{{_intl.optionalLabel}}</div> -->
+        </div>
+      </div>
+    </div>
+    <div class="mat-stepper-horizontal-line"></div>
+  </ng-container>
+  <ng-container>
+    <div>
+      <div>
+        <div class="mat-step-header-ripple" mat-ripple></div>
+        <div class="mat-step-text-label">Queued</div>
+        <div [class.mat-step-icon1]="true">
+          <!-- <span>1</span> -->
+
+        </div>
+        <div class="mat-step-label" [class.mat-step-label-active]="active" [class.mat-step-label-selected]="selected">
+
+          <!-- It there is no label template, fall back to the text label. -->
+
+
+          <!-- <div class="mat-step-optional" *ngIf="optional">{{_intl.optionalLabel}}</div> -->
+        </div>
+      </div>
+    </div>
+    <div class="mat-stepper-horizontal-line"></div>
+  </ng-container>
+</div>
